@@ -11,7 +11,7 @@ export const ActionBox = () => {
         <div className="p-2 border-b border-black flex flex-row justify-between"> 
           <input type="text" maxLength={29} placeholder="Nome" className="bg-gray-300 w-60 placeholder-black outline-none" />
           <div onMouseEnter={() => setIsShowing(true)} onMouseLeave={() => setIsShowing(false)} > 
-          <div className={`z-50 w-4 h-4 rounded-tr-lg border-black bg-${color}-500`}>
+          <div className={`z-50 w-[60px] h-[40.67px] rounded-tr-lg border-black bg-${color}-500 absolute top-0 left-[16.25rem]`}>
           <Popover>
             <Transition show={isShowing}>
               <Popover.Panel>
@@ -35,7 +35,7 @@ export const ActionBox = () => {
             Numero
           </div>
           <div>
-            <input type="text" placeholder="Tempo" maxLength={10} className="bg-gray-300 right-0 placeholder-black w-24 h-6 outline-none"/>
+            <input type="text" placeholder="Tempo" maxLength={10} className="bg-gray-300 text-right mr-4 placeholder-black w-24 h-6 outline-none"/>
           </div>
         </div>
     </div>
