@@ -8,14 +8,16 @@ export const ActionBox = () => {
 
   return (
     <div className="w-80 h-48 bg-gray-300 rounded-lg">
-        <div className="p-2 border-b border-black flex flex-row justify-between"> 
-          <input type="text" maxLength={29} placeholder="Nome" className="bg-gray-300 w-60 placeholder-black outline-none" />
+        <div className=" border-b border-black flex flex-row justify-between"> 
+          <div className="p-2 text-sm ">
+            Numero
+          </div>
           <div onMouseEnter={() => setIsShowing(true)} onMouseLeave={() => setIsShowing(false)} > 
-          <div className={`z-50 w-[60px] h-[40.67px] rounded-tr-lg border-black bg-${color}-500 absolute top-0 left-[16.25rem]`}>
+          <div className={`z-50 w-[60px] h-[40.67px] rounded-tr-lg border-black bg-${color}-500 top-0 left-[16.25rem]`}>
           <Popover>
             <Transition show={isShowing}>
               <Popover.Panel>
-                <div className="absolute flex flex-col mt-6 gap-1 bg-white p-2 rounded-lg">
+                <div className="absolute flex flex-col mt-6 gap-1 bg-white p-2 ml-3 rounded-lg">
                   <button className='w-4 h-4 rounded-full bg-green-500 cursor-pointer' onClick={() => setColor('green')}></button>
                   <button className='w-4 h-4 rounded-full bg-yellow-500 cursor-pointer' onClick={() => setColor('yellow')}></button>
                   <button className='w-4 h-4 rounded-full bg-red-500 cursor-pointer' onClick={() => setColor('red')}></button>
@@ -28,14 +30,11 @@ export const ActionBox = () => {
           </div>
         </div>
         <div className="p-2">
-          <textarea placeholder="Descrição..." maxLength={154} className="bg-gray-300 w-72 h-24 placeholder-black outline-none resize-none"/>
+          <textarea placeholder="Descrição" disabled maxLength={154} className="bg-gray-300 text-lg w-72 h-24 placeholder-black outline-none resize-none"/>
         </div>
-        <div className="flex flex-row pl-2 justify-between">
-          <div className="">
-            Numero
-          </div>
-          <div>
-            <input type="text" placeholder="Tempo" maxLength={10} className="bg-gray-300 text-right mr-4 placeholder-black w-24 h-6 outline-none"/>
+        <div className="pl-2 flex">
+          <div className="ml-auto">
+            <input type="text" disabled placeholder="Tempo (Tipo)" maxLength={10} className="bg-gray-300 placeholder-black w-24 h-6 outline-none text-sm"/>
           </div>
         </div>
     </div>
